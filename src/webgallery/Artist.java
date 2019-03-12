@@ -51,6 +51,13 @@ public class Artist extends Person{
         }
         return counter;
     }
-    
+    public double sumObras2(){
+        double counter=0;
+        for (int i = 0; i <this.obras.size() ; i++) {
+            counter+=(this.obras.get(i).getPrice())+(this.obras.get(i).getPrice()*0.02);
+            
+        }
+        return counter;
+    }
     
 }

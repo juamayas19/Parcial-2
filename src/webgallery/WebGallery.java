@@ -21,6 +21,7 @@ public class WebGallery {
         ArrayList<Artist> artists = new ArrayList();
         ArrayList<Client> clients = new ArrayList();
         readRegister(artists, clients);
+        sumTotalObras(artists);
     }
     public static ArrayList readRegister(ArrayList<Artist> artists, ArrayList<Client> clients)throws FileNotFoundException{
        
@@ -81,7 +82,7 @@ public class WebGallery {
     public static double sumTotalObras(ArrayList<Artist>artists){
         double counter=0;
         for (int i = 0; i < artists.size(); i++) {
-            counter+=artists.get(i).sumObras();
+            counter+=artists.get(i).sumObras2();
         }
         return counter;
     }
