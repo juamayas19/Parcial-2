@@ -17,9 +17,10 @@ import java.util.Scanner;
 public class WebGallery {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         ArrayList<Artist> artists = new ArrayList();
         ArrayList<Client> clients = new ArrayList();
+        readRegister(artists, clients);
     }
     public static ArrayList readRegister(ArrayList<Artist> artists, ArrayList<Client> clients)throws FileNotFoundException{
        
@@ -83,5 +84,8 @@ public class WebGallery {
             counter+=artists.get(i).sumObras();
         }
         return counter;
+    }
+    public static void writeArtist(){
+    
     }
 }
