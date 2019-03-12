@@ -5,6 +5,8 @@
  */
 package webgallery;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,12 +21,12 @@ public class WebGallery {
         ArrayList<Artist> artists = new ArrayList();
         ArrayList<Client> clients = new ArrayList();
     }
-    public static ArrayList readRegister(ArrayList<Artist> artists, ArrayList<Client> clients){
+    public static ArrayList readRegister(ArrayList<Artist> artists, ArrayList<Client> clients)throws FileNotFoundException{
        
         String name=null;
         String lastname=null;
         
-        Scanner read = new Scanner("Register.txt");
+        Scanner read = new Scanner(new File("Register.txt"));
         read.useDelimiter(":");
         while(read.hasNextLine()){
         if (read.hasNext()) {
